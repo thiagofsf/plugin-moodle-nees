@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<XMLDB PATH="mod/requestbutton/db" VERSION="2024100400" COMMENT="Schema for requestbutton activity plugin">
+    <TABLES>
+        <TABLE NAME="requestbutton" COMMENT="Stores requestbutton activity settings">
+            <FIELDS>
+                <FIELD NAME="id" TYPE="int" LENGTH="10" UNSIGNED="true" NOTNULL="true" SEQUENCE="true"/>
+                <FIELD NAME="course" TYPE="int" LENGTH="10" UNSIGNED="true" NOTNULL="true" COMMENT="Course ID"/>
+                <FIELD NAME="url" TYPE="text" NOTNULL="true" COMMENT="URL to send the GET request to"/>
+                <FIELD NAME="buttontext" TYPE="text" NOTNULL="true" COMMENT="Text displayed on the button"/>
+                <FIELD NAME="send_name" TYPE="int" LENGTH="1" NOTNULL="true" DEFAULT="0" COMMENT="Send student name"/>
+                <FIELD NAME="send_email" TYPE="int" LENGTH="1" NOTNULL="true" DEFAULT="0" COMMENT="Send student email"/>
+                <FIELD NAME="send_username" TYPE="int" LENGTH="1" NOTNULL="true" DEFAULT="0" COMMENT="Send student username"/>
+                <FIELD NAME="send_courseid" TYPE="int" LENGTH="1" NOTNULL="true" DEFAULT="0" COMMENT="Send course ID"/>
+                <FIELD NAME="send_coursename" TYPE="int" LENGTH="1" NOTNULL="true" DEFAULT="0" COMMENT="Send course name"/>
+                <FIELD NAME="send_shortname" TYPE="int" LENGTH="1" NOTNULL="true" DEFAULT="0" COMMENT="Send course short name"/>
+                <FIELD NAME="timecreated" TYPE="int" LENGTH="10" UNSIGNED="true" NOTNULL="true" COMMENT="Timestamp of creation"/>
+                <FIELD NAME="timemodified" TYPE="int" LENGTH="10" UNSIGNED="true" NOTNULL="true" COMMENT="Timestamp of last modification"/>
+            </FIELDS>
+            <KEYS>
+                <KEY NAME="primary" TYPE="primary" FIELDS="id"/>
+            </KEYS>
+        </TABLE>
+    </TABLES>
+</XMLDB>
