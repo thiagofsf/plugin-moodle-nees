@@ -1,0 +1,24 @@
+Aluno: Admin User
+Email: user@example.com
+Username: user
+Nome do Curso: teste
+Código do Curso: tst1
+----------------------------------
+Aluno: Thiago Freitas
+Email: thiagofsf@gmail.com
+Username: thiagofsf
+Nome do Curso: teste
+Código do Curso: tst1
+----------------------------------
+Aluno: Admin User
+Email: user@example.com
+Username: user
+Nome do Curso: teste
+Código do Curso: tst1
+----------------------------------
+Aluno: Admin User
+Email: user@example.com
+Username: user
+Nome do Curso: teste
+Código do Curso: tst1
+----------------------------------

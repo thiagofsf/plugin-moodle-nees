@@ -1,0 +1,12 @@
+FROM php:8.2-apache
+# use development php ini
+RUN mv /usr/local/etc/php/php.ini-development /usr/local/etc/php/php.ini
+# set default timezone
+RUN sed -ri -e 's!;date.timezone =!date.timezone = "America/Sao_Paulo"!g' /usr/local/etc/php/php.ini
+RUN apt-get update
+RUN apt-get install --yes --force-yes cron g++ gettext libicu-dev openssl libc-client-dev libkrb5-dev libxml2-dev libfreetype6-dev libgd-dev libmcrypt-dev bzip2 libbz2-dev libtidy-dev libcurl4-openssl-dev libz-dev libmemcached-dev libxslt-dev
+RUN docker-php-ext-configure gd --with-freetype=/usr --with-jpeg=/usr
+RUN docker-php-ext-install gd
+RUN pecl install redis && docker-php-ext-enable redis
+RUN docker-php-ext-install pdo pdo_mysql
+RUN a2enmod rewrite

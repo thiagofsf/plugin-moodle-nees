@@ -1,0 +1,2 @@
+#ignore files inside mysql folder
+server/mysql/*
